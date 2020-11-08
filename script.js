@@ -3,122 +3,128 @@ $("#currentDay").text(today.format("dddd, MMMM Do"));
 
 var currentTime = moment();
 
-
-// var nineOclock = moment('09:00:00', 'hh:mm:ss');
-// var tenOclock = moment('10:00:00', 'hh:mm:ss');
-// var elevenOclock = moment('11:00:00', 'hh:mm:ss');
-// var twelveOclock = moment('12:00:00', 'hh:mm:ss');
-// var oneOclock = moment('13:00:00', 'hh:mm:ss');
-// var twoOclock = moment('14:00:00', 'hh:mm:ss');
-// var threeOclock = moment('15:00:00', 'hh:mm:ss');
-// var fourOclock = moment('16:00:00', 'hh:mm:ss');
-// var fiveOclock = moment('17:00:00', 'hh:mm:ss');
-
-if (currentTime.isBetween(moment('08:00:00', 'hh:mm:ss'), moment('08:59:59', 'hh:mm:ss'))) {
-    $("#nine").addClass('future');
+if (currentTime.isBetween(
+    moment('08:00:00', 'hh:mm:ss'), moment('08:59:59', 'hh:mm:ss'))) {
+    $("#Oclock9").addClass('future');
 }
 
 if (currentTime.isBetween(moment('09:00:00', 'hh:mm:ss'), moment('09:59:59', 'hh:mm:ss'))) {
-    $("#nine").addClass('present');
+    $("#Oclock9").addClass('present');
 }
 
 else {
-    $("#nine").addClass('past');
+    $("#Oclock9").addClass('past');
 }
 
 if (currentTime.isBetween(moment('08:00:00', 'hh:mm:ss'), moment('09:59:59', 'hh:mm:ss'))) {
-    $("#ten").addClass('future');
+    $("#Oclock10").addClass('future');
 }
 
 if (currentTime.isBetween(moment('10:00:00', 'hh:mm:ss'), moment('10:59:59', 'hh:mm:ss'))) {
-    $("#ten").addClass('present');
+    $("#Oclock10").addClass('present');
 }
 
 else {
-    $("#ten").addClass('past');
+    $("#Oclock10").addClass('past');
 }
 
 if (currentTime.isBetween(moment('08:00:00', 'hh:mm:ss'), moment('10:59:59', 'hh:mm:ss'))) {
-    $("#eleven").addClass('future');
+    $("#Oclock11").addClass('future');
 }
 
 if (currentTime.isBetween(moment('11:00:00', 'hh:mm:ss'), moment('11:59:59', 'hh:mm:ss'))) {
-    $("#eleven").addClass('present');
+    $("#Oclock11").addClass('present');
 }
 
 else {
-    $("#eleven").addClass('past');
+    $("#Oclock11").addClass('past');
 }
 
 if (currentTime.isBetween(moment('08:00:00', 'hh:mm:ss'), moment('11:59:59', 'hh:mm:ss'))) {
-    $("#twelve").addClass('future');
+    $("#Oclock12").addClass('future');
 }
 
 if (currentTime.isBetween(moment('12:00:00', 'hh:mm:ss'), moment('12:59:59', 'hh:mm:ss'))) {
-    $("#twelve").addClass('present');
+    $("#Oclock12").addClass('present');
 }
 
 else {
-    $("#twelve").addClass('past');
+    $("#Oclock12").addClass('past');
 }
 
 if (currentTime.isBetween(moment('08:00:00', 'hh:mm:ss'), moment('12:59:59', 'hh:mm:ss'))) {
-    $("#one").addClass('future');
+    $("#Oclock13").addClass('future');
 }
 
 if (currentTime.isBetween(moment('13:00:00', 'hh:mm:ss'), moment('13:59:59', 'hh:mm:ss'))) {
-    $("#one").addClass('present');
+    $("#Oclock13").addClass('present');
 }
 
 else {
-    $("#one").addClass('past');
+    $("#Oclock13").addClass('past');
 }
 
 if (currentTime.isBetween(moment('08:00:00', 'hh:mm:ss'), moment('13:59:59', 'hh:mm:ss'))) {
-    $("#two").addClass('future');
+    $("#Oclock14").addClass('future');
 }
 
 if (currentTime.isBetween(moment('14:00:00', 'hh:mm:ss'), moment('14:59:59', 'hh:mm:ss'))) {
-    $("#two").addClass('present');
+    $("#Oclock14").addClass('present');
 }
 
 else {
-    $("#two").addClass('past');
+    $("#Oclock14").addClass('past');
 }
 
 if (currentTime.isBetween(moment('08:00:00', 'hh:mm:ss'), moment('14:59:59', 'hh:mm:ss'))) {
-    $("#three").addClass('future');
+    $("#Oclock15").addClass('future');
 }
 
 if (currentTime.isBetween(moment('15:00:00', 'hh:mm:ss'), moment('15:59:59', 'hh:mm:ss'))) {
-    $("#three").addClass('present');
+    $("#Oclock15").addClass('present');
 }
 
 else {
-    $("#three").addClass('past');
+    $("#Oclock15").addClass('past');
 }
 
 if (currentTime.isBetween(moment('08:00:00', 'hh:mm:ss'), moment('15:59:59', 'hh:mm:ss'))) {
-    $("#four").addClass('future');
+    $("#Oclock16").addClass('future');
 }
 
 if (currentTime.isBetween(moment('16:00:00', 'hh:mm:ss'), moment('16:59:59', 'hh:mm:ss'))) {
-    $("#four").addClass('present');
+    $("#Oclock16").addClass('present');
 }
 
 else {
-    $("#four").addClass('past');
+    $("#Oclock16").addClass('past');
 }
 
 if (currentTime.isBetween(moment('08:00:00', 'hh:mm:ss'), moment('16:59:59', 'hh:mm:ss'))) {
-    $("#five").addClass('future');
+    $("#Oclock17").addClass('future');
 }
 
 if (currentTime.isBetween(moment('17:00:00', 'hh:mm:ss'), moment('17:59:59', 'hh:mm:ss'))) {
-    $("#five").addClass('present');
+    $("#Oclock17").addClass('present');
 }
 
 else {
-    $("#five").addClass('past');
+    $("#Oclock17").addClass('past');
 }
+
+var scheduleEndTime = 18;
+for (i = 9; i < scheduleEndTime; i++) {
+    var hour = i.toString();
+    var timeBlock = localStorage.getItem(hour); 
+    $("#Oclock" + hour).text(timeBlock);
+}
+
+$(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+
+    var inputEl = $(this).siblings(".description").val();
+    var timeEl = $(this).siblings(".description").data("time");
+
+    localStorage.setItem(timeEl, inputEl);
+});
 
